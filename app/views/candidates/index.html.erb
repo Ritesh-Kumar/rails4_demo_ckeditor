@@ -1,0 +1,29 @@
+<h1>Listing candidates</h1>
+
+<table border="1px">
+  <thead>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Address</th>
+    <th>Dob</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody id="candidates">
+  <%= render @candidates %>
+  </tbody>
+</table>
+
+
+<br>
+
+<%= form_for(@candidate, remote: true) do |f| %>
+    <%= render 'form' %>
+<% end %>
+
+
+
